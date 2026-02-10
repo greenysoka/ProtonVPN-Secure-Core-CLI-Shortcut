@@ -149,6 +149,7 @@ Example:
 ```bash
 greenysoka@fedora:~$ vpn -p
 Applying maximum privacy settings...
+Anonymous crash reports has been set to disabled
 IPv6 has been set to disabled
 Moderate NAT has been set to disabled
 Kill switch has been set to standard

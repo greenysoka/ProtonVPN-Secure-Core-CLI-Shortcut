@@ -50,6 +50,7 @@ case "$1" in
 
   "-p") # privacy
     echo "Applying maximum privacy settings..."
+    protonvpn config set anonymous-crash-reports off
     protonvpn config set ipv6 off
     protonvpn config set moderate-nat off
     protonvpn config set kill-switch standard
