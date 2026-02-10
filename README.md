@@ -68,7 +68,7 @@ Connected to CH-AT#2 in Vienna, via Switzerland. Your new IP address is 91.132.1
 greenysoka@fedora:~$
 ```
 
-
+---
 
 ### Disconnect from the current vpn connection:
 ```bash
@@ -82,7 +82,7 @@ Disconnecting from ProtonVPN...
 greenysoka@fedora:~$
 ```
 
-
+---
 
 ### List all selected Secure Core Servers:
 ```bash
@@ -106,7 +106,7 @@ CH-RO#2
 greenysoka@fedora:~$
 ```
 
-
+---
 
 ### Show the current account and your public IP address:
 ```bash
@@ -123,7 +123,7 @@ Public IP: 165.231.183.xx
 greenysoka@fedora:~$
 ```
 
-
+---
 
 ### Get a menu to select a specific VPN route:
 ```bash
@@ -138,7 +138,7 @@ greenysoka@fedora:~$ vpn -m
 Select a server number (or 'c' to cancel):
 ```
 
-
+---
 
 ### Automatically configure your ProtonVPN CLI with the best privacy settings:
 ```bash
@@ -159,7 +159,7 @@ Privacy configuration applied.
 greenysoka@fedora:~$
 ```
 
-
+---
 
 ### Show all these commands in your terminal:
 ```bash
@@ -180,7 +180,7 @@ Options:
 greenysoka@fedora:~$
 ```
 
-
+---
 
 > **Important:** This needs the ProtonVPN CLI installed. My tool is just a shortcut but not the main product.
 > Get it here: https://protonvpn.com/support/linux-vpn-setup
