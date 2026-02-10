@@ -45,48 +45,142 @@ This is a personal selection, not an official ranking.
 
 ## Usage
 
-Make the file executable:
+**Make the file executable:**
 
 ```bash
 chmod +x vpn
 ```
 
-Run the commands:
 
-Connect to a random VPN server in the list:
+**Run the commands:**
+
+### Connect to a random VPN server in the list:
 ```bash
 ~$ vpn
 ```
 
-Disconnect from the current vpn connection:
+Example:
+```bash
+greenysoka@fedora:~$ vpn
+Selected Secure Core Server: CH-AT#2
+Server list is outdated, updating... This may take a moment.
+Connected to CH-AT#2 in Vienna, via Switzerland. Your new IP address is 91.132.139.24.
+greenysoka@fedora:~$
+```
+
+
+
+### Disconnect from the current vpn connection:
 ```bash
 ~$ vpn -d
 ```
 
-List all selected Secure Core Servers:
+Example:
+```bash
+greenysoka@fedora:~$ vpn -d
+Disconnecting from ProtonVPN...
+greenysoka@fedora:~$
+```
+
+
+
+### List all selected Secure Core Servers:
 ```bash
 ~$ vpn -l
 ```
 
-Show the current account and your public IP address
+Example:
+```bash
+greenysoka@fedora:~$ vpn -l
+CH-AT#2
+SE-EE#1
+CH-EE#2
+CH-LU#2
+IS-NO#1
+SE-NO#1
+CH-NO#2
+SE-FI#1
+CH-FI#2
+SE-RO#1
+CH-RO#2
+greenysoka@fedora:~$
+```
+
+
+
+### Show the current account and your public IP address:
 ```bash
 ~$ vpn -s
 ```
 
-Get a menu to select a specific VPN route
+Example:
+```bash
+greenysoka@fedora:~$ vpn -s
+--- VPN Status ---
+Account: greenysoka@pm.me
+Public IP: 165.231.183.xx
+------------------
+greenysoka@fedora:~$
+```
+
+
+
+### Get a menu to select a specific VPN route:
 ```bash
 ~$ vpn -m
 ```
 
-Automatically configure your ProtonVPN CLI with the best privacy settings:
+Example:
+```bash
+greenysoka@fedora:~$ vpn -m
+1) CH-AT#2    3) CH-EE#2   5) IS-NO#1   7) CH-NO#2   9) CH-FI#2	11) CH-RO#2
+2) SE-EE#1    4) CH-LU#2   6) SE-NO#1   8) SE-FI#1  10) SE-RO#1
+Select a server number (or 'c' to cancel):
+```
+
+
+
+### Automatically configure your ProtonVPN CLI with the best privacy settings:
 ```bash
 ~$ vpn -p
 ```
 
-Show all these commands in your terminal:
+Example:
+```bash
+greenysoka@fedora:~$ vpn -p
+Applying maximum privacy settings...
+IPv6 has been set to disabled
+Moderate NAT has been set to disabled
+Kill switch has been set to standard
+VPN Accelerator has been set to enabled
+NetShield has been set to 'malware, ads and trackers'
+Custom DNS has been set to disabled
+Privacy configuration applied.
+greenysoka@fedora:~$
+```
+
+
+
+### Show all these commands in your terminal:
 ```bash
 ~$ vpn -h
 ```
 
-> **Important:** This also needs the ProtonVPN CLI installed. My tool is just a shortcut but not the main product:
-https://protonvpn.com/support/linux-vpn-setup
+Example:
+```bash
+greenysoka@fedora:~$ vpn -h
+Usage: vpn [option]
+Options:
+  -d  Disconnect VPN
+  -l  List servers in the list
+  -s  Show connection status and IP
+  -m  Selection menu for specific servers
+  -p  Apply maximum privacy settings
+  -h  Show help information for commands
+greenysoka@fedora:~$
+```
+
+
+
+> **Important:** This needs the ProtonVPN CLI installed. My tool is just a shortcut but not the main product.
+> Get it here: https://protonvpn.com/support/linux-vpn-setup
