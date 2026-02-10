@@ -16,13 +16,31 @@ SERVERS=(
 )
 
 case "$1" in
-  "-l"|"--list")
+  "-l") # list
     printf "%s\n" "${SERVERS[@]}"
     ;;
-  "-d"|"--disconnect")
+
+  "-d") # disconnect
     echo "Disconnecting from ProtonVPN..."
     protonvpn disconnect
     ;;
+
+  "-m") # menu
+    PS3="Select a server number (or 'c' to cancel): "
+    select s in "${SERVERS[@]}"; do
+      if [[ "$REPLY" == "c" ]]; then
+        echo "Connection attempt cancelled."
+        exit 0
+      elif [[ -n "$s" ]]; then
+        echo "Connecting to $s..."
+        protonvpn connect "$s"
+        break
+      else
+        echo "Invalid option: $REPLY. Please choose a number from the list or 'c'."
+      fi
+    done
+    ;;
+
   *)
     INDEX=$(( RANDOM % ${#SERVERS[@]} ))
     SELECTED="${SERVERS[$INDEX]}"
