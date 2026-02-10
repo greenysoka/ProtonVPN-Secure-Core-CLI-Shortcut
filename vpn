@@ -1,0 +1,21 @@
+#!/bin/bash
+
+SERVERS=(
+  "CH-AT#2"
+  "SE-EE#1"
+  "CH-EE#2"
+  "CH-LU#2"
+  "IS-NO#1"
+  "SE-NO#1"
+  "CH-NO#2"
+  "SE-FI#1"
+  "CH-FI#2"
+  "SE-RO#1"
+  "CH-RO#1"
+  "CH-RO#2"
+)
+
+INDEX=$(( RANDOM % ${#SERVERS[@]} ))
+
+echo "Random Server selected: ${SERVERS[$INDEX]}"
+protonvpn connect "${SERVERS[$INDEX]}"
