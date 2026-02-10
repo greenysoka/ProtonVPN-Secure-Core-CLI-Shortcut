@@ -9,19 +9,21 @@ Secure Core routes traffic through a hardened Proton-owned server (for example i
 More about Secure Core:
 https://protonvpn.com/vpn-servers#secure-core
 
+
 ## Selected privacy-friendly countries
 
-The following countries were selected based on general privacy reputation and legal environment.  
+The following countries were selected based on general privacy reputation, legal environment, and history of data-retention policies.  
 This is a personal selection, not an official ranking.
 
-- Switzerland
-- Iceland
-- Norway
-- Sweden
-- Romania
-- Finland
-- Estonia
-- Luxembourg
+- Switzerland – Strong privacy laws, outside the EU, independent legal system.
+- Iceland – Very strong freedom of expression and data protection environment.
+- Norway – Non-EU country with solid privacy protections and stable legal system.
+- Sweden – Secure Core infrastructure location with strong rule of law.
+- Romania – Constitutional court repeatedly struck down mandatory data retention laws.
+- Finland – Generally strong privacy standards and stable legal framework.
+- Estonia – Modern digital infrastructure with transparent governance.
+- Luxembourg – Privacy-friendly reputation and stable EU legal environment.
+
 
 ## Secure Core routes used
 
@@ -32,12 +34,14 @@ This is a personal selection, not an official ranking.
 - Finland: SE-FI#1, CH-FI#2
 - Romania: SE-RO#1, CH-RO#1, CH-RO#2
 
+
 ## Features
 
 - Random Secure Core connection
 - Interactive menu
 - Quick disconnect
 - Minimal setup
+
 
 ## Usage
 
@@ -64,9 +68,19 @@ List all selected Secure Core Servers:
 ~$ vpn -l
 ```
 
-Get a selection menu to connect to a specific server:
+Show the current account and your public IP address
 ```bash
-~$ vpn -d
+~$ vpn -s
+```
+
+Get a menu to select a specific VPN route
+```bash
+~$ vpn -m
+```
+
+Automatically configure your ProtonVPN CLI with the best privacy settings:
+```bash
+~$ vpn -p
 ```
 
 Show all these commands in your terminal:

@@ -62,8 +62,8 @@ case "$1" in
   "-h") # help
     echo "Usage: vpn [option]"
     echo "Options:"
-    echo "  -l  List servers in the list"
     echo "  -d  Disconnect VPN"
+    echo "  -l  List servers in the list"
     echo "  -s  Show connection status and IP"
     echo "  -m  Selection menu for specific servers"
     echo "  -p  Apply maximum privacy settings"
