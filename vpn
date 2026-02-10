@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Nodes according to the official list: https://protonvpn.com/vpn-servers#secure-core
 SERVERS=(
   "CH-AT#2"
   "SE-EE#1"
@@ -11,11 +12,17 @@ SERVERS=(
   "SE-FI#1"
   "CH-FI#2"
   "SE-RO#1"
-  "CH-RO#1"
   "CH-RO#2"
 )
 
-INDEX=$(( RANDOM % ${#SERVERS[@]} ))
-
-echo "Random Server selected: ${SERVERS[$INDEX]}"
-protonvpn connect "${SERVERS[$INDEX]}"
+case "$1" in
+  "-l"|"--list")
+    printf "%s\n" "${SERVERS[@]}"
+    ;;
+  *)
+    INDEX=$(( RANDOM % ${#SERVERS[@]} ))
+    SELECTED="${SERVERS[$INDEX]}"
+    echo "Selected Secure Core Server: $SELECTED"
+    protonvpn connect "$SELECTED"
+    ;;
+esac
