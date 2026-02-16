@@ -54,7 +54,7 @@ chmod +x vpn
 
 **Run the commands:**
 
-### Connect to a random VPN server in the list:
+### Connect to a random standard VPN server in preferred countries:
 ```bash
 ~$ vpn
 ```
@@ -62,9 +62,23 @@ chmod +x vpn
 Example:
 ```bash
 greenysoka@fedora:~$ vpn
-Selected Secure Core Server: CH-AT#2
-Server list is outdated, updating... This may take a moment.
-Connected to CH-AT#2 in Vienna, via Switzerland. Your new IP address is 91.132.139.24.
+Connecting to random server in: LU
+Connected to LU#17 in Luxembourg, Luxembourg. Your new IP address is 5.253.204.xx.
+greenysoka@fedora:~$
+```
+
+---
+
+### Connect to a random Secure Core server:
+```bash
+~$ vpn -sc
+```
+
+Example:
+```bash
+greenysoka@fedora:~$ vpn -sc
+Selected Secure Core Server: CH-NO#2
+Connected to CH-NO#2 in Oslo, via Switzerland. Your new IP address is 146.70.170.xx.
 greenysoka@fedora:~$
 ```
 
@@ -92,6 +106,7 @@ greenysoka@fedora:~$
 Example:
 ```bash
 greenysoka@fedora:~$ vpn -l
+--- Secure Core Servers ---
 CH-AT#2
 SE-EE#1
 CH-EE#2
@@ -103,6 +118,16 @@ SE-FI#1
 CH-FI#2
 SE-RO#1
 CH-RO#2
+
+--- Standard Servers ---
+CH
+IS
+NO
+SE
+RO
+FI
+EE
+LU
 greenysoka@fedora:~$
 ```
 
@@ -172,12 +197,14 @@ Example:
 greenysoka@fedora:~$ vpn -h
 Usage: vpn [option]
 Options:
-  -d  Disconnect VPN
-  -l  List servers in the list
-  -s  Show connection status and IP
-  -m  Selection menu for specific servers
-  -p  Apply maximum privacy settings
-  -h  Show help information for commands
+  (none) Connect to a random standard server in preferred countries
+  -sc     Connect to a random Secure Core server
+  -d     Disconnect VPN
+  -l     List servers and countries
+  -s     Show connection status and IP
+  -m     Selection menu for Secure Core servers
+  -p     Apply maximum privacy settings
+  -h     Show help information for commands
 greenysoka@fedora:~$
 ```
 
