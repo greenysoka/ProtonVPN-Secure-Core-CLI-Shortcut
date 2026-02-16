@@ -1,10 +1,13 @@
-# ProtonVPN Secure Core CLI Shortcut
+# ProtonVPN Privacy CLI Shortcut
 
-This small Bash CLI tool connects to a predefined list of ProtonVPN Secure Core servers.
+This small Bash CLI tool quickly connects to privacy-friendly ProtonVPN servers.
 
-It is designed for Linux users who use the ProtonVPN CLI and want a quick, simple command to connect to privacy-friendly Secure Core routes without manually selecting servers every time.
+It provides a simple command to connect to random servers in selected privacy-friendly countries or specific Secure Core routes without manually selecting servers every time.
 
-Secure Core routes traffic through a hardened Proton-owned server (for example in Switzerland or Iceland) before exiting in another country. This adds an extra protection layer if an exit server is monitored or seized.
+## Modes
+
+1. **Standard Mode (Default):** Connects to a random server in a privacy-friendly country (Switzerland, Iceland, Norway, Sweden, etc.).
+2. **Secure Core Mode (`-sc`):** Routes traffic through a hardened Proton-owned server before exiting in another country.
 
 More about Secure Core:
 https://protonvpn.com/vpn-servers#secure-core
@@ -25,7 +28,7 @@ This is a personal selection, not an official ranking.
 - Luxembourg – Privacy-friendly reputation and stable EU legal environment.
 
 
-## Secure Core routes used
+## Secure Core routes used (with `-sc`)
 
 - Austria: CH-AT#2 (to connect to my own country)
 - Estonia: SE-EE#1, CH-EE#2
@@ -37,7 +40,8 @@ This is a personal selection, not an official ranking.
 
 ## Features
 
-- Random Secure Core connection
+- **One-command connection** to privacy-friendly jurisdictions
+- Optional **Secure Core** routing (`-sc`)
 - Interactive menu
 - Quick disconnect
 - Minimal setup
@@ -98,7 +102,7 @@ greenysoka@fedora:~$
 
 ---
 
-### List all selected Secure Core Servers:
+### List all selected Servers and Countries:
 ```bash
 ~$ vpn -l
 ```
