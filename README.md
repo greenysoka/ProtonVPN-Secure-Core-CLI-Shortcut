@@ -162,9 +162,19 @@ greenysoka@fedora:~$
 Example:
 ```bash
 greenysoka@fedora:~$ vpn -m
-1) CH-AT#2    3) CH-EE#2   5) IS-NO#1   7) CH-NO#2   9) CH-FI#2	11) CH-RO#2
-2) SE-EE#1    4) CH-LU#2   6) SE-NO#1   8) SE-FI#1  10) SE-RO#1
-Select a server number (or 'c' to cancel):
+Select Mode:
+1) Secure Core Servers
+2) Standard Privacy Countries
+Choose (1-2): 2
+1) CH
+2) IS
+3) NO
+4) SE
+5) RO
+6) FI
+7) EE
+8) LU
+Select a Country (or 'c' to cancel):
 ```
 
 ---
@@ -199,17 +209,18 @@ greenysoka@fedora:~$
 Example:
 ```bash
 greenysoka@fedora:~$ vpn -h
+ProtonVPN Privacy CLI Shortcut v1.0
 Usage: vpn [option]
 Options:
   (none) Connect to a random standard server in preferred countries
-  -sc     Connect to a random Secure Core server
+  -sc    Connect to a random Secure Core server
   -d     Disconnect VPN
   -l     List servers and countries
   -s     Show connection status and IP
-  -m     Selection menu for Secure Core servers
+  -m     Selection menu (Secure Core or Country)
   -p     Apply maximum privacy settings
-  -h     Show help information for commands
-greenysoka@fedora:~$
+  -v     Show version
+  -h     Show help information
 ```
 
 ---
